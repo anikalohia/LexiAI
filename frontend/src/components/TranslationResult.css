@@ -1,0 +1,152 @@
+.translation-result {
+  width: 100%;
+  min-height: 200px;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.translation-result.loading {
+  border-color: #667eea;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05), rgba(118, 75, 162, 0.05));
+}
+
+.translation-result.error {
+  border-color: #dc3545;
+  background: linear-gradient(135deg, rgba(220, 53, 69, 0.05), rgba(220, 53, 69, 0.1));
+}
+
+.translation-result.empty {
+  border-color: #adb5bd;
+  background: #f8f9fa;
+}
+
+/* Loading state */
+.loading-content {
+  text-align: center;
+  color: #667eea;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(102, 126, 234, 0.3);
+  border-top: 3px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+.loading-content p {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Error state */
+.error-content {
+  text-align: center;
+  color: #dc3545;
+}
+
+.error-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.error-message {
+  font-weight: 500;
+  font-size: 1rem;
+  max-width: 300px;
+  line-height: 1.4;
+}
+
+/* Empty state */
+.empty-content {
+  text-align: center;
+  color: #6c757d;
+}
+
+.empty-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.empty-content p {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Success state */
+.result-content {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.translated-text {
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #495057;
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .translation-result {
+    min-height: 150px;
+  }
+  
+  .loading-spinner {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .error-icon,
+  .empty-icon {
+    font-size: 1.8rem;
+  }
+  
+  .result-content {
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .translation-result {
+    min-height: 120px;
+  }
+  
+  .loading-spinner {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 0.8rem;
+  }
+  
+  .error-icon,
+  .empty-icon {
+    font-size: 1.5rem;
+  }
+  
+  .loading-content p,
+  .error-message,
+  .empty-content p {
+    font-size: 0.9rem;
+  }
+  
+  .result-content {
+    padding: 0.6rem;
+  }
+  
+  .translated-text {
+    font-size: 0.9rem;
+  }
+}

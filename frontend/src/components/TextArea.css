@@ -1,0 +1,85 @@
+.text-area-wrapper {
+  position: relative;
+}
+
+.text-area {
+  width: 100%;
+  min-height: 200px;
+  padding: 1rem;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  background: white;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #495057;
+  font-family: inherit;
+  resize: vertical;
+  transition: all 0.3s ease;
+}
+
+.text-area:hover:not(:disabled) {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.text-area:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.text-area:disabled {
+  background: #f8f9fa;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.text-area::placeholder {
+  color: #adb5bd;
+  font-style: italic;
+}
+
+.char-counter {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 1rem;
+  font-size: 0.8rem;
+  color: #6c757d;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.char-counter-warning {
+  color: #fd7e14;
+  font-weight: 600;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .text-area {
+    min-height: 150px;
+    padding: 0.8rem;
+  }
+  
+  .char-counter {
+    bottom: 0.3rem;
+    right: 0.8rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-area {
+    min-height: 120px;
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+  
+  .char-counter {
+    bottom: 0.2rem;
+    right: 0.6rem;
+    padding: 0.15rem 0.4rem;
+  }
+}
