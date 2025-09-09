@@ -4,7 +4,7 @@ import LanguageSelector from "./LanguageSelector";
 import TextArea from "./TextArea";
 import TranslateButton from "./TranslateButton";
 import TranslationResult from "./TranslationResult";
-import "./Translator.css";
+
 
 const SUPPORTED_LANGUAGES = [
   { code: "en", name: "English", flag: "🇺🇸" },

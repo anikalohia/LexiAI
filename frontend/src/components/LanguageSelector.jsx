@@ -1,5 +1,5 @@
 import React from "react";
-import "./LanguageSelector.css";
+
 
 function LanguageSelector({ label, value, onChange, languages, disabled }) {
   return (
